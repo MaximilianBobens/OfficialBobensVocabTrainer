@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokabeltrainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" id="study-mode-link">Lernmodus</a></li>
+            <li><a href="#" id="test-mode-link">Testmodus</a></li>
+            <li><a href="#" id="dashboard-link">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div id="study-mode" class="mode">
+        <div class="vocabulary-trainer">
+            <h1 id="unit-title">Unit 1: Erste Schritte</h1>
+            <div class="unit-selector">
+                <label for="unit-select">Wähle eine Einheit:</label>
+                <select id="unit-select">
+                    <option value="1">Unit 1: Erste Karriere-Schritte</option>
+                    <option value="2">Unit 2: In Bearbeitung</option>
+                    <option value="3">Unit 3: In Bearbeitung</option>
+                    <!-- Weitere Einheiten hinzufügen -->
+                </select>
+            </div>
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="side front">
+                        <p id="german-word" class="word">Hallo</p>
+                    </div>
+                    <div class="side back">
+                        <p id="english-word" class="word">Hello</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="flip-button">Umdrehen</button>
+                <button id="next-word">Nächstes Wort</button>
+                <button id="shuffle-button">Mischen</button>
+            </div>
+            <div id="progress">Wort 1 von 100</div>
+        </div>
+    </div>
+
+    <div id="test-mode" class="mode" style="display: none;">
+        <div class="vocabulary-tester">
+            <h1>Testmodus</h1>
+            <div class="unit-selector">
+                <label for="test-unit-select">Wähle eine Einheit:</label>
+                <select id="test-unit-select">
+                    <option value="1">Unit 1: Erste Karriere-Schritte</option>
+                    <option value="2">Unit 2: In Bearbeitung</option>
+                    <option value="3">Unit 3: In Bearbeitung</option>
+                    <!-- Weitere Einheiten hinzufügen -->
+                </select>
+            </div>
+            <form id="test-form">
+                <!-- Die Testfragen werden hier dynamisch eingefügt -->
+            </form>
+            <button id="submit-test">Test abschließen</button>
+            <div id="test-result"></div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="mode" style="display: none;">
+        <div class="dashboard-container">
+            <h1>Dashboard</h1>
+            <div id="test-history">
+                <!-- Testergebnisse werden hier dynamisch eingefügt -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Vergewissern Sie sich, dass der Skriptpfad korrekt ist -->
+    <script src="index.js"></script>
+</body>
+</html>

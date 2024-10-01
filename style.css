@@ -1,0 +1,232 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navigation */
+nav {
+    background-color: #2c3e50;
+}
+
+nav .navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav .navigation li {
+    margin: 0 15px;
+}
+
+nav .navigation a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav .navigation a.active {
+    border-bottom: 2px solid #ecf0f1;
+}
+
+/* Modus-Container */
+.mode {
+    display: none;
+    padding: 20px;
+}
+
+.mode.active {
+    display: block;
+}
+
+/* Vokabeltrainer-Stile */
+.vocabulary-trainer, .vocabulary-tester, .dashboard-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Flashcard */
+.flashcard-container {
+    perspective: 1000px;
+}
+
+.flashcard {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flashcard.flip {
+    transform: rotateY(180deg);
+}
+
+.flashcard .side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #2980b9;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flashcard .back {
+    background-color: #27ae60;
+    transform: rotateY(180deg);
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #27ae60;
+}
+
+/* Fortschrittsanzeige */
+#progress {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Testmodus */
+#test-form {
+    margin-top: 20px;
+}
+
+#test-form .test-question {
+    margin-bottom: 15px;
+}
+
+#test-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#test-form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#submit-test {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #e74c3c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#submit-test:hover {
+    background-color: #c0392b;
+}
+
+#test-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Dashboard */
+.dashboard-container {
+    text-align: center;
+}
+
+#test-history {
+    margin-top: 20px;
+}
+
+.test-entry {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.test-entry h3 {
+    margin: 0;
+}
+
+.test-details {
+    margin-top: 10px;
+}
+
+.test-details .question {
+    margin-bottom: 10px;
+}
+
+.test-details .correct {
+    color: #27ae60;
+}
+
+.test-details .incorrect {
+    color: #e74c3c;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
